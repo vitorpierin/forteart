@@ -35,6 +35,14 @@ export const Wrapper = styled.div`
     z-index: 90;
     text-shadow: 1px 1px 5px #000;
   }  
+  @media(max-width:600px){
+    &{
+      height: 200px;
+    }
+   h1{
+     font-size: 40px;
+   } 
+  }
 `;
 
 
@@ -64,6 +72,14 @@ export const Content = styled.div`
   img{
     width: 450px;
     
+  }
+
+
+  @media(max-width:600px){
+    img{
+      width: 300px;
+      padding: 15px;
+    }
   }
 `;
 

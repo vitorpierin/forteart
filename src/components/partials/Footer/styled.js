@@ -11,6 +11,8 @@ export const FooterArea = styled.div`
   text-align: center;
   background-color: #262626;
   padding: 20px 50px;
+  border-top: 1px solid #666 ;
+  
   h3{
     font-size: 18px;
     color: #fff;
@@ -24,11 +26,9 @@ export const FooterArea = styled.div`
   }
   
   .grid{
-    display: grid;
-    grid-template-columns: repeat(3, 120px);
+    display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
    
     .space{
      
@@ -37,52 +37,65 @@ export const FooterArea = styled.div`
      justify-content: center;
       .bar{
       width: 1px;
-      height: 60px;
+      height: 30px;
       background-color: #f1f1f1;
    }
     }
    
     .socialMedia{
      display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-     text-align: start;
+     justify-content: center;
+     align-items: center;
      color: #fff;
       
       .socialIcon.face{
         color: rgba(66,103,178, 0.8);
       }
       .socialIcon.insta{
-        color: rgba(228,64,95, 0.8);
+        color:  rgba(188, 42, 141,0.65);
+        
       }
       .socialIcon.whats{
         color: rgba(18,140,126, 0.8);
       }
      a{
+      font-size:30px;
        text-decoration: none;
        color: #fff;
-       margin-right: 5px;
+       margin-right: 10px;
+       &:last-child{
+         margin-right: 15px;
+       }
+       &:hover{
+         color: #F45B69;
+       }
      }
      
      
     }
     .socialName{
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: start;
+      margin-left: 10px;
+      
      
     }
     
   }
   @media (max-width:600px){
     .grid{
-      grid-template-columns: repeat(3, 100px);
+    .socialMedia{
+      
+
+     
+    }
     span{
       font-size: 14px;
+      display: none;
     }
     h3{
-      font-size: 14px;
+      font-size: 10px;
     }  
       
       

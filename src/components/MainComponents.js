@@ -12,6 +12,7 @@ export const PageContainer = styled.div`
   text-align: center;
   max-width: 1000px;
   margin: auto;
+ 
 `;
 export const PageTitle = styled.div`
   text-align: center;

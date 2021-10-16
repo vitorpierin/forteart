@@ -7,7 +7,7 @@ export const Area = styled.section`
 `;
 export const Wrapper = styled.div`
   position: absolute;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -35,6 +35,15 @@ export const Wrapper = styled.div`
     z-index: 90;
     text-shadow: 1px 1px 5px #000;
   }  
+
+  @media(max-width:600px){
+    &{
+      height: 200px;
+    }
+   h1{
+     font-size: 40px;
+   } 
+  }
 `;
 
 
@@ -55,7 +64,7 @@ export const Content = styled.div`
   justify-content: center;
   text-align: justify;
   margin: auto;
-  padding: 50px;
+  padding: 20px;
   
   p{
     text-indent: 15px;
@@ -67,15 +76,15 @@ export const Content = styled.div`
   }
   form{
   background-color: rgba(195,195,195,0.3);
-  max-width: 460px ;
   display: flex;
+  width: 600px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
-  padding:30px 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  padding:15px 25px;
   border-radius: 15px;
- 
   color: #262626;
   box-shadow: 0px 0px 10px #000;
   h4{
@@ -87,6 +96,7 @@ export const Content = styled.div`
     font-size: 15px;
   }
   input{
+    width: 100%;
     border-radius: 5px;
     &:focus{
       outline-style: solid;
@@ -108,6 +118,7 @@ export const Content = styled.div`
     }
   }
   textarea{
+    width: 100%;
     border-radius: 5px;
     outline: none;
     &:focus{
@@ -122,8 +133,15 @@ export const Content = styled.div`
     margin-top: 15px;
   }
 
-};
-
+}
+  @media(max-width:600px){
+    &{
+      
+    }
+    form{
+      width: 340px;
+    }
+  }
 `;
 
   

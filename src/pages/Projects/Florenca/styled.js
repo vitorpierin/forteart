@@ -6,7 +6,7 @@ export const Area = styled.section`
   
 `;
 export const Wrapper = styled.div`
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -25,12 +25,32 @@ export const Wrapper = styled.div`
     opacity: 0.4;
     background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%,  rgba(0,0,0,0.6) 50%,  rgba(0,0,0,0.6) 100%);
   }
-
+  div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   h1{
     color: #fff;
     font-weight: bold;
     z-index: 90;
     text-shadow: 1px 1px 5px #000;
+    margin: 0px 0px;
+  }
+  p {
+    font-family: 'Poppins', sans-serif;
+    color: #f1f1f1;
+    z-index: 90;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000;
+  }
+  @media(max-width:600px){
+    h1{
+      font-size: 40px;
+    }
+    p{
+      font-size: 15px;
+    }
   }
 `;
 
@@ -47,22 +67,24 @@ export const Image = styled.img`
   
 `;
 
-export const Content = styled.div`  
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   max-width: 1000px;
+  margin: auto;
+  
 `;
 
 export const Text = styled.div`
   padding: 50px;
+  text-align: justify;
+  text-indent: 15px;
 `;
 
-export const Video = styled.div`
-  flex: 1;
-  padding: 20px;
-video{
-  width: 500px;
-  padding: 10px;
-}
-`;
+
 
 export const Gallery = styled.div`
   h3{
@@ -85,6 +107,9 @@ export const Grid = styled.div`
     width: 200px;
     height: 200px;
     cursor: pointer;
+  }
+  @media(max-width:600px){
+    grid-template-columns: repeat(1, 200px);
   }
   
 `;

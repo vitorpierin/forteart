@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../../../components/partials/Header';
-import {Area, Wrapper, Image, Content, Text, Video, Grid} from './styled';
+import {Area, Wrapper, Image, Container, Text, Video, Grid} from './styled';
 import Background from '../../../images/SlideImages/image1.jpg';
-import {PageContainer} from '../../../components/MainComponents';
 import Player from '../../../images/Porto Seguro/video2.mp4';
 import { Gallery } from './styled';
 import ImageOne from '../../../images/Porto Seguro/image1.jpg';
@@ -18,14 +17,17 @@ const Page = () => {
         <Area>
           <Wrapper>
             <Image src={Background} />
+            <div>
             <h1>PORTO SEGURO</h1>
+            <p>Bairro Alto | Curitiba - PR</p>
+            </div>
           </Wrapper>
         </Area>
           
-          <PageContainer>
-            <Content>
+         
+            <Container>
               <Text>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis nisi in lacus sollicitudin semper. Suspendisse dictum congue nisi. Mauris sed rutrum elit, vitae fringilla lectus. Etiam fringilla nisi ac ultricies suscipit. Duis ultrices, risus volutpat tincidunt ornare, ante elit gravida mauris, quis sollicitudin neque ex ut erat. Donec congue augue augue. Proin semper, nunc quis blandit aliquam, mauris est dignissim mauris, non fermentum ipsum dui sed libero. Nulla sed ultrices nulla. Fusce at posuere justo. Nulla interdum, magna sed tempor tincidunt, felis ex accumsan justo, auctor convallis metus urna a nisi. Fusce massa lorem, ultrices et nibh et, pellentesque ultricies metus. Donec gravida feugiat libero, id mollis elit dictum ut. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam convallis nisi in lacus sollicitudin semper. Suspendisse dictum congue nisi. Mauris sed rutrum elit, vitae fringilla lectus. Etiam fringilla nisi ac ultricies suscipit. Duis ultrices, risus volutpat tincidunt ornare, ante elit gravida mauris, quis sollicitudin neque ex ut erat. Donec congue augue augue. Proin semper. </p>
               </Text>
               <Gallery>
                 <SRLWrapper>
@@ -37,10 +39,10 @@ const Page = () => {
                 </SRLWrapper>
              </Gallery>
             <Video>
-                <video src={Player} controls="controls" autoPlay="false"></video>
+                <video src={Player} controls="controls"></video>
               </Video>
-            </Content>
-          </PageContainer>
+            </Container>
+       
         
        
         

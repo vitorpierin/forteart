@@ -18,7 +18,6 @@ export const HeaderArea = styled.div`
 
   
   img{
-    
     width: 120px;
   }
 
@@ -34,6 +33,7 @@ export const HeaderArea = styled.div`
     box-shadow: 2px 0 5px #000;
     cursor: pointer;
     margin-left: 10px;
+    margin-right: 10px;
   &:hover{
     background-color: #F45B69;
   }
@@ -77,7 +77,7 @@ export const NavBar = styled.nav`
     text-decoration: none;
     color: #fff;
   }
-  @media(max-width: 600px) {
+  @media(max-width: 800px) {
     display: none;
 }
 
@@ -98,7 +98,7 @@ export const SocialMedia = styled.div`
       color: #F45B69;
     }
   }
-  @media (max-width:600px){
+  @media (max-width:800px){
     display: none;
   }
 
@@ -115,7 +115,7 @@ export const Burger = styled.div`
     box-shadow: 1px 1px 2px #262626;
     margin-right: 10px;
   }
-  @media (max-width: 600px){
+  @media (max-width: 800px){
     display: flex;
     
   }
@@ -125,14 +125,14 @@ export const NavMob = styled.nav`
     
     display: flex;
     flex-flow: row nowrap;
+   
       p{
         align-self: flex-end;
         margin-right: 20px;
         color: #fff;
-        border: 2px solid #fff;
         border-radius: 50%;
         padding: 10px;
-        font-weight: bold;
+        font-weight: 900;
       }
       li {
     padding: 18px 10px;
@@ -150,7 +150,9 @@ export const NavMob = styled.nav`
       width: 40px;
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 800px) {
+    z-index: 1000;
+    position: relative;
     flex-flow: column nowrap;
     background-color: #6D0D13;
     position: fixed;

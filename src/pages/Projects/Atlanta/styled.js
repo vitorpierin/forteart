@@ -14,12 +14,14 @@ export const Area = styled.section`
 `;
 export const Wrapper = styled.div`
   position: absolute;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: flex-end;
   overflow: hidden;
   position: relative;
+  
   
   &::before{
     content: '';
@@ -31,17 +33,37 @@ export const Wrapper = styled.div`
     left: 0;
     overflow: hidden;
     opacity: 0.4;
-    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%,  rgba(0,0,0,0.6) 50%,  rgba(0,0,0,0.6) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%,  rgba(0,0,0,0.9) 50%,  rgba(0,0,0,0.9) 100%);
     
   }
-
+  div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
   
   h1{
     color: #fff;
     font-weight: bold;
     z-index: 90;
     text-shadow: 1px 1px 5px #000;
+    margin: 0px 0px;
   } 
+  p {
+    font-family: 'Poppins', sans-serif;
+    color: #f1f1f1;
+    z-index: 90;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px #000;
+  }
+  @media(max-width:600px){
+    h1{
+      font-size: 40px;
+    }
+    p{
+      font-size: 15px;
+    }
+  }
 `;
 
 
@@ -52,18 +74,24 @@ export const Image = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  
-  
- 
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
   
 `;
 
-export const Content = styled.div`  
-  max-width: 1000px;
-`;
 
 export const Text = styled.div`
   padding: 50px;
+  text-align: justify;
+  text-indent: 15px;
 `;
 
 export const Video = styled.div`
@@ -72,10 +100,16 @@ export const Video = styled.div`
 video{
   width: 500px;
   padding: 10px;
+  text-align: center;
 }
+  @media(max-width:600px){
+    video{
+      width:340px;
+    }
+  }
 `;
 
-export const Galery = styled.div`
+export const Gallery = styled.div`
   h3{
     background-color: #6D0D13;
     width: 100vw;
@@ -97,6 +131,8 @@ export const Grid = styled.div`
     height: 200px;
     cursor: pointer;
   }
-  
+  @media(max-width:600px){
+    grid-template-columns: repeat(1, 200px);
+  }
 `;
 
