@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import { Area, Wrapper, Slide, Slider, Image, Content, 
-Arrow, SliderButtons, PrevArrow, NextArrow } from './styled';
+Arrow, SliderButtons, PrevArrow, NextArrow, Title } from './styled';
 import { Link } from 'react-router-dom';
 
 
@@ -52,7 +52,7 @@ const Banner = ({slides}) => {
                     <Slider>
                     <Image src={slide.image} alt={slide.alt}/>
                       <Content>
-                        <h1>{slide.title}</h1>
+                        <Title>{slide.title}</Title>
                         <Link to={slide.path} className='button'>{slide.label}<Arrow/></Link>
                       </Content>
                     </Slider>

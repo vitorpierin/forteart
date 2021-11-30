@@ -2,8 +2,8 @@ import styled from 'styled-components/macro';
 
 
 export const Area = styled.section`
-  
-  
+  display: flex;
+  flex-direction: column;
 `;
 export const Wrapper = styled.div`
   height: 250px;
@@ -79,9 +79,17 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 50px;
   text-align: justify;
+  color: #444;
+  margin-top: 0px;
+  p{
   text-indent: 15px;
+}
 `;
 
 
@@ -113,5 +121,46 @@ export const Grid = styled.div`
   }
   
 `;
-
+export const BulletPoints = styled.ul`
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: center;
+  list-style: none;
+  text-align: start;
+  margin-left: -60px;
+  .bullet{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  li{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    p{
+      font-size: 22px;
+    }
+    span{
+      margin-right: 20px;
+      font-size: 35px;
+      color: #6D0D13;
+      
+    }
+  }
+  @media(max-width: 800px){
+    li{
+  
+    p{
+      font-size:15px;
+    }
+    span{
+     
+      font-size: 25px;
+     
+      
+    }
+  }
+  }
+`;
 

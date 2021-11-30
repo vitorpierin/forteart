@@ -58,10 +58,11 @@ export const Slider = styled.div`
 export const Image = styled.img`
       @keyframes autoplay6 {
       0% {opacity: 0.0}
-      4% {opacity: 1.0}
-      33.33% {opacity: 1.0}
-      37.33% {opacity: 0.0}
-      100% {opacity: 0.0}
+      10% {opacity: 0.8}
+      50% {opacity: 1.0}
+      60% {opacity: 0.8}
+      90% {opacity: 0.2}
+      100% {opacity: 0}
     }
   position: absolute;
   top: 0;
@@ -69,7 +70,8 @@ export const Image = styled.img`
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  animation: 12s autoplay6 infinite linear;
+  animation: 10s autoplay6 ease-in-out;
+  transition: autoplay6 10s;
   top: 0; 
   left: 0; 
   opacity: 0.0;
@@ -89,33 +91,66 @@ export const Content = styled.div`
   width: calc(100%-100px);
   color: #fff;
   text-align: left;
-  
-
-    h1{
-      font-size: 40px;
-      font-weight: 400;
-      text-transform: uppercase;
-      text-shadow: 1px 1px 15px #000;
+  .button{
+    position: absolute;
+    width: 170px;
+    padding: 10px 20px;
+    background: #6D0D13;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 0 5px #999;
+    cursor: pointer;
+    text-decoration: none;
+    margin-top: 200px;
+    transition: 0.3s;
+    &:hover{
+      background:#F45B69;
     }
-    .button{
-      width: 170px;
-      padding: 10px 20px;
-      background: #6D0D13;
-      border: none;
-      color: #fff;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      border-radius: 5px;
-      box-shadow: 2px 0 5px #999;
-      cursor: pointer;
-      text-decoration: none;
-      &:hover{
-        background:#F45B69;
-      }
-    }
+  }
 `;
 
+export const Title = styled.h1`
+text-align: center;
+  overflow: hidden;
+  letter-spacing: 20px;
+  font-size: 40px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(1, 1.5, 0.3, 0.9);
+  ::before{
+    content: '';
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+
+  }
+  @keyframes slide {
+      0% {height: 0px}      
+      100% {height:60px}
+  }
+  @media(max-width:800px){
+    animation-name: slide;
+    animation-duration: 1.5s;
+    animation-timing-function: cubic-bezier(1, 1.5, 0.3, 0.9);
+    ::before{
+      content: '';
+      position: absolute;
+      left:0;
+
+  }
+  @keyframes slide {
+      0% {width: 0px}      
+      100% {width:100%}
+  }
+  }
+`;
 
 export const Arrow = styled(IoMdArrowRoundForward)`
   margin-left: 10px;

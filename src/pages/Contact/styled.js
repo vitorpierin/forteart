@@ -2,8 +2,9 @@ import styled from 'styled-components/macro';
 
 
 export const Area = styled.section`
- 
-  
+ display: flex;
+ flex-direction: column;
+ height: 100vh;
 `;
 export const Wrapper = styled.div`
   position: absolute;
@@ -24,7 +25,7 @@ export const Wrapper = styled.div`
     left: 0;
     overflow: hidden;
     opacity: 0.4;
-    background: linear-gradient(0deg, rgba(109,13,19,0.7) 0%,  rgba(11,56,83,0.7) 50%,  rgba(109,13,19,0.7) 100%);
+    background: linear-gradient(90deg,  rgba(109,13,19,0.4) 10%, rgba(109,13,19,0.6) 20%, rgba(109,13,19,0.8) 30%, rgba(109,13,19,0.9) 40%, rgba(109,13,19,1) 50%,  rgba(109,13,19,1) 60%, rgba(109,13,19,0.9) 70%, rgba(109,13,19,0.8) 80%, rgba(109,13,19,0.6) 90%, rgba(109,13,19,0.4) 100%);
     
   }
 
@@ -46,24 +47,13 @@ export const Wrapper = styled.div`
   }
 `;
 
-
-export const Image = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%,  rgba(0,0,0,0.6) 50%,  rgba(0,0,0,0.6) 100%);
-
-`;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: justify;
-  margin: auto;
+  margin-top: 50px;
   padding: 20px;
   
   p{
@@ -74,38 +64,52 @@ export const Content = styled.div`
     width: 450px;
     
   }
-  form{
-  background-color: rgba(195,195,195,0.3);
+`;
+export const Form = styled.div`
   display: flex;
-  width: 600px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  padding:15px 25px;
-  border-radius: 15px;
-  color: #262626;
-  box-shadow: 0px 0px 10px #000;
-  h4{
-    text-align: center;
-    font-size: 25px;
+  margin-top: -80px;
+  .label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#6D0D13;
+    margin-bottom: -18px;
+    p{
+      font-size: 25px;
+    }
   }
-  p{
-    text-align: center;
-    font-size: 15px;
+  .formIcon{
+    font-size: 22px;
+    color:#6D0D13;   
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    color: #262626;
   }
   input{
+    box-shadow: 0px 0px 4px #999;
     width: 100%;
     border-radius: 5px;
     &:focus{
       outline-style: solid;
-      outline-color: #262626;
+      outline-color: #c3c3c3;
       outline-width: 1px;
+      box-shadow: 0px 0px 5px #333;
     }
     &:last-child{
       border: none;
-      margin-top: 20px;
+      margin-top: 50px;
       color: #fff;
       border-radius: 5px;
       font-weight: bold;
@@ -118,29 +122,28 @@ export const Content = styled.div`
     }
   }
   textarea{
+    box-shadow: 0px 0px 4px #999;
     width: 100%;
     border-radius: 5px;
     outline: none;
     &:focus{
       outline-style: solid;
-      outline-color: #262626;
+      outline-color: #c3c3c3;
       outline-width: 1px;
+      box-shadow: 0px 0px 5px #333;
     }
   }
- 
   label{
+    color: #666;
+    text-shadow: 1px 1px 1px #c3c3c3;
     align-self: flex-start;
     margin-top: 15px;
   }
-
-}
-  @media(max-width:600px){
-    &{
-      
-    }
+  @media(max-width: 800px){
     form{
-      width: 340px;
-    }
+    width: 350px;
+   
+  }
   }
 `;
 

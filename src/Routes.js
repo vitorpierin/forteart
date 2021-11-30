@@ -36,8 +36,7 @@ export default () => {
       </Route>
       <Route path='/veneza'>
         <Veneza/>
-      </Route>
-     
+      </Route>     
       <Route path='/contato'>
         <Contact/>
       </Route>

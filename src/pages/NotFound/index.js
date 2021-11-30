@@ -1,16 +1,15 @@
 import React from 'react';
-import { PageTitle } from '../../components/MainComponents';
-import  Header2  from '../../components/partials/Header2';
+import  Header  from '../../components/partials/Header';
+import {Area, Content} from './styled';
 
 const Page = () => {
   return (
-    <div > 
-      <Header2/>
-      <PageTitle> 
-        404 - Página não existe!
-      </PageTitle> 
-
-    </div>
+    <Area > 
+      <Header/>
+      <Content> 
+        <h1> 404</h1> <h1> Página não existe!</h1>
+      </Content> 
+    </Area>
   );
 }
 
