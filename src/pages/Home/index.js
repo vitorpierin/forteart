@@ -64,8 +64,7 @@ const Page = () => {
             
             <C.Content>
               <Fade right>            
-                <p>A ForteArt é referência no mercado que atua. Nossos empreendimentos 
-                  são construídos com materiais modernos e de extrema qualidade. Confira mais detalhes na página de empreendimentos. 
+                <p>Clique <a href="/projetos">aqui</a> para conhecer nossos projetos.  
                 </p>
               </Fade>
             </C.Content>
@@ -120,10 +119,10 @@ const Page = () => {
                   <textarea id="message" rows="8" cols="19" placeholder="Digite sua mensagem" name="message"></textarea>
                   <input  type="submit" value="Enviar"/>
                 </form>
-                
-                
               </C.Form>
-              <a href="https://api.whatsapp.com/send?phone=5541991831747&app=facebook&entry_point=page_cta&fbclid=IwAR0JE40DUU65mbAHlQDNbngXRurfyMD51XfDoAbjKjhzByyZ6xXSz58yFBg" target="_blank" rel="noreferrer"><FontAwesomeIcon className="whats" icon={faWhatsappSquare}/><p>(41)99183-1747</p></a>
+              <div>
+                <a href="https://api.whatsapp.com/send?phone=5541991831747&app=facebook&entry_point=page_cta&fbclid=IwAR0JE40DUU65mbAHlQDNbngXRurfyMD51XfDoAbjKjhzByyZ6xXSz58yFBg" target="_blank" rel="noreferrer"><FontAwesomeIcon className="whats" icon={faWhatsappSquare}/><p>(41)99183-1747</p></a>
+              </div>
             </Zoom>
           </C.Contact>
         </C.Container>

@@ -1,10 +1,12 @@
 import React, {useRef} from 'react';
 import Header from '../../components/partials/Header';
-import {Area, Form, Wrapper, Image, Content} from './styled';
+import {Area, Form, Content} from './styled';
 import emailjs from 'emailjs-com';
 import {PageTitle} from '../../components/MainComponents';
 import {MdPermIdentity, MdOutlineMail} from 'react-icons/md';
 import {BiMessageDetail} from 'react-icons/bi';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faWhatsappSquare} from '@fortawesome/free-brands-svg-icons';
 
 const Page = () => {
 
@@ -39,6 +41,9 @@ const Page = () => {
               <textarea id="message" rows="8" cols="19" placeholder="Digite sua mensagem" name="message"></textarea>
               <input  type="submit" value="Enviar"/>
             </form>    
+            <div>
+              <a href="https://api.whatsapp.com/send?phone=5541991831747&app=facebook&entry_point=page_cta&fbclid=IwAR0JE40DUU65mbAHlQDNbngXRurfyMD51XfDoAbjKjhzByyZ6xXSz58yFBg" target="_blank" rel="noreferrer"><FontAwesomeIcon className="whats" icon={faWhatsappSquare}/><p>(41)99183-1747</p></a>
+            </div>
           </Form>
         </Content>
           

@@ -11,10 +11,11 @@ import Atlanta from './pages/Projects/Atlanta';
 import Florenca from './pages/Projects/Florenca';
 import Porto from './pages/Projects/Porto';
 import Veneza from './pages/Projects/Veneza';
-
+import ScrollToTop from './components/ScrollToTop.js';
 
 export default () => {
   return (
+   <ScrollToTop>
     <Switch>
       <Route exact path='/'>
         <Home/>
@@ -44,5 +45,6 @@ export default () => {
         <NotFound/>
       </Route>
     </Switch>
+  </ScrollToTop>
   );
 }

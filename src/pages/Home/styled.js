@@ -1,40 +1,61 @@
 import styled from 'styled-components';
 
+export const Container = styled.div`
+  margin-top: 0px;
+  max-width: 1000px;
+  margin: auto;
+ 
+  .other{
+    border-right: none;
+    border-left: 3px solid #6D0D13;
+    border-bottom: none;
+    box-shadow:0px 0px 3px -5px #666 !important;
+  }
+  @media(max-width: 800px){
+    .other{
+      
+    }
+  }
+`;
+export const Logo = styled.img`
+  padding: 30px;
+  width: 400px;
+  @media(max-width: 800px){
+    width: 300px;
+  }
+`;
 
 export const TitleArea = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 25px 0px;
-  :first-child{
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-  :last-child{
-    margin-top: 0;
-    margin-bottom: 10px;
-    
-  }
+  margin-bottom: 40px;
+  
  
   h1:first-child{
     text-align: center;
-    margin: 60px 0px;
     color: #666;
     text-shadow: 1px 1px 2px #555;
-    margin-right: 20px;
     font-weight: 100;
     font-size: 40px;
+    margin-bottom: 0px;
   }
   h1:last-child{
+    margin-top: 0px;
     color: #6D0D13;
     font-weight: bolder;
   }
   @media(max-width:800px){
+    flex-direction: column;
     h1:first-child{
+      margin-bottom: 0px;
       font-size:25px;
       margin-right: 10px;
+      margin-top: 30px;
     }
     h1:last-child{
+      margin-top: 0px;
       font-size: 25px;
   }
   }
@@ -59,30 +80,7 @@ export const ContentArea = styled.div`
     }
   }
 `;
-export const Container = styled.div`
-  
-  max-width: 1000px;
-  margin: auto;
- 
-  .other{
-    border-right: none;
-    border-left: 3px solid #6D0D13;
-    border-bottom: none;
-    box-shadow:0px 0px 3px -5px #666 !important;
-  }
-  @media(max-width: 800px){
-    .other{
-      
-    }
-  }
-`;
-export const Logo = styled.img`
-  padding: 30px;
-  width: 400px;
-  @media(max-width: 800px){
-    width: 200px;
-  }
-`;
+
 export const Content = styled.div`
   max-width: 600px;
   align-self: center;
@@ -90,7 +88,11 @@ export const Content = styled.div`
   text-align: justify;
   text-indent: 15px;
   
- 
+  a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #6D0D13;
+  }
   p{
     color: #555;
   }
@@ -117,7 +119,7 @@ export const Info = styled.div`
  align-items: center;
  justify-content: space-around;
  margin-top: 30px;
- margin-bottom: px;
+ margin-bottom: 30px;
 
  @media(max-width:800px){
   display: flex;
@@ -200,21 +202,27 @@ h3{
   color: #6D0D13;
   text-shadow: 1px 1px 2px #555;
 }
+
 a{
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   font-size: 50px;
-  margin-bottom: 30px;
   color: #6D0D13;
-  p{
-    margin-left: 15px;
+
+  
+    p{
+    margin-left: 10px;
     color: #666;
     text-shadow: 2px 2px 35px #555;
     font-weight: bold;
     font-size:35px;
     color: #6D0D13;
+    letter-spacing: 2px;
   }
+ 
+ 
 }
 p{
   display: flex;
@@ -254,6 +262,7 @@ export const Form = styled.div`
     color:#6D0D13;
     margin-bottom: -18px;
     p{
+      color:#6D0D13;
       font-size: 25px;
     }
   }
@@ -261,6 +270,7 @@ export const Form = styled.div`
     font-size: 22px;
     color:#6D0D13;
     margin-right: 5px;
+    
 
    
   }
@@ -279,10 +289,14 @@ export const Form = styled.div`
     margin-top: 0px;
     width: 100%;
     border-radius: 5px;
+    border: 1px solid #c3c3c3;
+    box-shadow: 0px 0px 5px #c3c3c3;
     
     &:focus{
       outline-style: solid;
+      outline-color: #777;
       outline-width: 1px;
+      box-shadow: 0px 0px 5px #555;
     }
     &:last-child{
       border: none;
@@ -302,16 +316,20 @@ export const Form = styled.div`
     width: 100%;
     border-radius: 5px;
     outline: none;
+    border: 1px solid #c3c3c3;
+    box-shadow: 0px 0px 5px #c3c3c3;
     &:focus{
       outline-style: solid;
+      outline-color: #777;
       outline-width: 1px;
+      box-shadow: 0px 0px 5px #555;
     }
   }
   label{
-    color: #666;
     text-shadow: 1px 1px 1px #c3c3c3;
     align-self: flex-start;
     margin-top: 15px;
+   
   }
   @media(max-width: 800px){
     form{

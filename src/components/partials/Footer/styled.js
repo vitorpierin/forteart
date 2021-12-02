@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterArea = styled.div`
+  margin-top: 30px;
   bottom: 0;
   width: 100%;
   display: flex;
@@ -9,49 +10,53 @@ export const FooterArea = styled.div`
   align-items: center;
   text-align: center;
   background-color: #262626;
-  padding: 20px 50px;
   border-top: 1px solid #666 ;
-  h3{
-    font-size: 18px;
-    color: #fff;
-    font-weight: 400;
-
+  
+  .socialName{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      letter-spacing: 5px;
+      h3{
+        font-size: 18px;
+        color: #fff;
+        font-weight: 400;
+        font-family:'Lato', sans-serif;
+        margin-bottom: 0px;
+      } 
+      p{
+        margin-top: 0px;
+      }     
+    }
+    
   }
  
   p{
     font-size: 8px;
     color: #fff;
     letter-spacing: 2px;
+    font-family:'Lato', sans-serif!important;
   }
   
  
-    .socialName{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-left: 10px;
-      letter-spacing: 5px;
-      
-     
-    }
     
-  }
-  @media (max-width:600px){
-    .grid{
-    .socialMedia{
+  @media (max-width:800px){
+    .socialName{
       
-
-     
+      h3{
+        font-size: 14px;
+        
+      } 
+      p{
+        font-size: 10px;
+        margin-top: 5px;
+      }     
     }
-    span{
-      font-size: 14px;
-      display: none;
+    p{
+      font-size: 8px;
     }
-    h3{
-      font-size: 10px;
-    }  
-      
-      
-    }
+   
   }
 `;

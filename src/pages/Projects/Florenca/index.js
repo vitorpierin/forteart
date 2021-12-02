@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from '../../../components/partials/Header';
-import {Area, BulletPoints, Wrapper, Image, Text, Container, Grid} from '../../../components/ProjectComponents';
-import { Gallery } from './styled';
+import {ProjectTitle, Area, BulletPoints, Text, Container, Gallery, Grid} from '../../../components/ProjectComponents';
 import ImageOne from '../../../images/Florença/image1.jpg';
 import ImageTwo from '../../../images/Florença/image2.jpg';
 import ImageThree from '../../../images/Florença/image3.jpg';
 import ImageFour from '../../../images/Florença/image4.jpg';
 import { SRLWrapper } from "simple-react-lightbox";
-import {ProjectTitle} from '../../../components/MainComponents';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
@@ -16,7 +14,7 @@ const Page = () => {
       <Area>
         <Header/>
         <ProjectTitle>
-          <h1>F L O R E N Ç A</h1>
+          <h1>FLORENÇA</h1>
           <p>Pineville | Pinhais - PR</p>
         </ProjectTitle>
         <Container>
@@ -30,16 +28,16 @@ const Page = () => {
           </BulletPoints>
         </Zoom>
       </Text>         
-          <Gallery>
-            <SRLWrapper>
-              <Grid>
-                <img src={ImageOne} />
-                <img src={ImageTwo} />
-                <img src={ImageThree} />
-                <img src={ImageFour} />
-              </Grid>
-            </SRLWrapper>
-          </Gallery>
+      <Gallery>
+        <SRLWrapper>
+          <Grid>
+            <img src={ImageOne} alt="apartamento Pinhais" />
+            <img src={ImageTwo} alt="apartamento Pinhais" />
+            <img src={ImageThree} alt="apartamento Pinhais" />
+            <img src={ImageFour} alt="apartamento Pinhais"/>
+          </Grid>
+        </SRLWrapper>
+      </Gallery>
           
         </Container> 
         

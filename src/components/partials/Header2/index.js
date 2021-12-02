@@ -3,11 +3,9 @@ import { Link } from 'react-router-dom';
 import {HeaderArea, SocialMedia, NavBar, Burger, NavMob} from './styled';
 import Logo from '../../../images/logofort.png';
 import Dropdown from '../../Dropdown';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faFacebookF,  faInstagram, faWhatsapp} from '@fortawesome/free-brands-svg-icons';
 import {faTimes, faBars} from '@fortawesome/free-solid-svg-icons';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 
 const Header = () => {
@@ -15,12 +13,8 @@ const Header = () => {
 
 
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-
   const [navbar,setNavBar] = useState(false);
-
   const [buttonContact,setButtonContact] = useState(false);
-
   const handleClick = () => setClick(!click);
  
 
@@ -49,9 +43,6 @@ const Header = () => {
                 </li>
                 <li>
                     <Link to='/projetos' >Empreendimentos</Link>
-              
-                  {dropdown && <Dropdown className="align"/>}
-          
                 </li>
                 <li>
                   <Link to='/contato' >Contato</Link>

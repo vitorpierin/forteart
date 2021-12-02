@@ -12,7 +12,7 @@ const Page = () => {
       <Header/>
         <Fade top>  
           <PageTitle>
-            <h1>Quem</h1> <h1>Somos</h1>
+            <div><h1>Quem</h1> <h1>Somos</h1></div>
           </PageTitle>
         </Fade>
       <Content>

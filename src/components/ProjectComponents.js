@@ -1,9 +1,42 @@
 import styled from 'styled-components';
 
+export const ProjectTitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 0px;
+  h1{
+    color: #6D0D13;
+    font-weight: bolder;
+    font-size: 50px;
+    text-shadow: 1px 1px 5px #c3c3c3;
+    letter-spacing: 20px;
+    margin-bottom: 0px;
+  }
+  p{
+    margin-top: 0px;
+    text-align: center;
+    color: #999;
+    font-weight: 100;
+    letter-spacing: 5px;
+  }
+  @media(max-width: 800px){
+    h1{
+     font-size: 35px;
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+`;
 
 export const Area = styled.section`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 export const Container = styled.div`
@@ -11,10 +44,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  max-width: 1000px;
-  margin: auto;
-  
+  max-width: 1000px;  
 `;
 
 
@@ -23,7 +53,7 @@ export const Text = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 10px 40px;
   text-align: justify;
   text-indent: 15px;
   color: #444;
@@ -36,7 +66,7 @@ export const BulletPoints = styled.ul`
   justify-content: center;
   list-style: none;
   text-align: start;
-  margin-left: -60px;
+  margin-left: -70px;
   
   li{
     display: flex;
@@ -71,7 +101,7 @@ export const Video = styled.div`
   flex: 1;
   padding: 20px;
 video{
-  width: 600px;
+  width: 800px;
   padding: 10px;
   text-align: center;
 }
@@ -92,19 +122,30 @@ export const Gallery = styled.div`
 `;
 
 export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
-  grid-gap: 10px;
+  max-width: 1000px;
   height: 100%;
   padding-bottom: 40px;
   img{
     width: 200px;
     height: 200px;
     cursor: pointer;
+    margin-right: 15px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 5px #c3c3c3;
+    transition: 0.25s ease-in-out;
+    :hover{
+      box-shadow: 0px 0px 5px #555;
+    }
   }
-  @media(max-width:600px){
-    grid-template-columns: repeat(1, 200px);
+  @media(max-width:800px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img{
+    margin-top: 15px;
+  }
   }
 `;

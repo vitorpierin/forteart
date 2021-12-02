@@ -1,8 +1,6 @@
 import React from 'react';
 import Header from '../../../components/partials/Header';
-import {ProjectTitle} from '../../../components/MainComponents';
-import {Area, BulletPoints, Text, Video, Grid, Container, Gallery} from '../../../components/ProjectComponents';
-import Background from '../../../images/SlideImages/image1.jpg';
+import {ProjectTitle, Area, BulletPoints, Text, Video, Grid, Container, Gallery} from '../../../components/ProjectComponents';
 import Player from '../../../images/Atlanta/video1.mp4';
 import ImageOne from '../../../images/Atlanta/image1.jpg';
 import ImageTwo from '../../../images/Atlanta/image2.jpg';
@@ -25,7 +23,7 @@ const Page = () => {
     <Header/>
          
       <ProjectTitle>
-      <Fade top> <h1>A T L A N T A</h1></Fade> 
+      <Fade top> <h1>ATLANTA</h1></Fade> 
       <Fade bottom><p>Pineville | Pinhais - PR</p></Fade> 
       </ProjectTitle>
           
@@ -46,12 +44,12 @@ const Page = () => {
           <SRLWrapper>
             
               <Grid>
-              <Fade right><img src={ImageOne} /></Fade>
-              <Fade bottom><img src={ImageTwo} /></Fade>
-              <Fade left><img src={ImageThree} /></Fade>
-              <Fade right><img src={ImageFour} /></Fade>
-              <Fade top><img src={ImageFive} /></Fade>
-              <Fade left><img src={ImageSix} /></Fade>
+              <Fade right><img src={ImageOne} alt="apartamento Pinhais" /></Fade>
+              <Fade bottom><img  src={ImageTwo} alt="apartamento Pinhais" /></Fade>
+              <Fade left><img  src={ImageThree} alt="apartamento Pinhais" /></Fade>
+              <Fade right><img  src={ImageFour} alt="apartamento Pinhais" /></Fade>
+              <Fade top><img  src={ImageFive} alt="apartamento Pinhais" /></Fade>
+              <Fade left><img  src={ImageSix} alt="apartamento Pinhais" /></Fade>
               </Grid>
             
           </SRLWrapper>

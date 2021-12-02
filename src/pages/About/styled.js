@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 export const Area = styled.div`
-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +26,6 @@ export const Content = styled.div`
   img{
     width: 550px;
     margin-top: 50px;
-    margin-bottom: 0px;
     :after{
       content: '';
       background-color: #000;

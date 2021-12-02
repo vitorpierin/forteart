@@ -1,8 +1,7 @@
 import React from 'react';
 import Header from '../../../components/partials/Header';
-import {Area, BulletPoints, Container, Text, Video, Grid} from './styled';
+import {ProjectTitle, Area, BulletPoints, Container, Text, Video, Gallery, Grid} from '../../../components/ProjectComponents';
 import Player from '../../../images/Veneza/video3.mp4';
-import { Gallery } from './styled';
 import ImageOne from '../../../images/Veneza/image1.jpeg';
 import ImageTwo from '../../../images/Veneza/image2.jpeg';
 import ImageThree from '../../../images/Veneza/image3.jpg';
@@ -13,7 +12,6 @@ import ImageSeven from '../../../images/Veneza/image7.jpg';
 import ImageEight from '../../../images/Veneza/image8.jpg';
 import ImageNine from '../../../images/Veneza/image9.jpg';
 import { SRLWrapper } from "simple-react-lightbox";
-import {ProjectTitle} from '../../../components/MainComponents';
 import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
@@ -22,7 +20,7 @@ const Page = () => {
     <Area>
       <Header/>  
       <ProjectTitle>
-        <Fade top> <h1>V E N E Z A</h1></Fade> 
+        <Fade top> <h1>VENEZA</h1></Fade> 
         <Fade bottom><p>Jd. Weissopolis| Pinhais - PR</p></Fade> 
       </ProjectTitle>  
       <Container>   
@@ -41,15 +39,15 @@ const Page = () => {
         <Gallery>
           <SRLWrapper>
             <Grid>
-            <Fade bottom><img src={ImageOne} /></Fade>
-            <Fade bottom><img src={ImageTwo} /></Fade>
-            <Fade bottom><img src={ImageThree} /></Fade>
-            <Fade left><img src={ImageFour} /></Fade>
-            <Fade center><img src={ImageFive} /></Fade>
-            <Fade right><img src={ImageSix} /></Fade>
-            <Fade top><img src={ImageSeven} /></Fade>
-            <Fade top><img src={ImageEight} /></Fade>
-            <Fade top><img src={ImageNine} /></Fade>
+            <Fade bottom><img src={ImageOne} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade bottom><img src={ImageTwo} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade bottom><img src={ImageThree} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade left><img src={ImageFour} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade center><img src={ImageFive} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade right><img src={ImageSix} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade top><img src={ImageSeven}  alt='Apartamento em Pinhais próximo a Curitiba'/></Fade>
+            <Fade top><img src={ImageEight} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
+            <Fade top><img src={ImageNine} alt='Apartamento em Pinhais próximo a Curitiba' /></Fade>
             </Grid>
           </SRLWrapper>
         </Gallery>

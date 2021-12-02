@@ -1,16 +1,13 @@
 import React from 'react';
 import Header from '../../../components/partials/Header';
-import {Area, BulletPoints, Container, Text, Video, Grid} from './styled';
-
+import {ProjectTitle, Area, BulletPoints, Container, Text, Video, Grid, Gallery} from '../../../components/ProjectComponents';
 import Player from '../../../images/Porto Seguro/video2.mp4';
-import { Gallery } from './styled';
 import ImageOne from '../../../images/Porto Seguro/image1.jpg';
 import ImageTwo from '../../../images/Porto Seguro/image2.jpg';
 import ImageThree from '../../../images/Porto Seguro/image3.jpg';
 import ImageFour from '../../../images/Porto Seguro/image4.jpg';
 import ImageFive from '../../../images/Porto Seguro/image5.jpg';
 import { SRLWrapper } from "simple-react-lightbox";
-import {ProjectTitle} from "../../../components/MainComponents";
 import Fade from 'react-reveal/Fade';
 
 const Page = () => {
@@ -18,7 +15,7 @@ const Page = () => {
     <Area> 
       <Header/>      
       <ProjectTitle>
-      <Fade top><h1>P O R T O&nbsp; &nbsp;&nbsp;S E G U R O</h1></Fade>
+      <Fade top><h1>PORTO <br/> SEGURO</h1></Fade>
       <Fade bottom><p>Bairro Alto | Curitiba - PR</p></Fade>
       </ProjectTitle>           
       <Container>
@@ -35,11 +32,11 @@ const Page = () => {
         <Gallery>
           <SRLWrapper>
             <Grid>
-              <img src={ImageOne} />
-              <img src={ImageTwo} />
-              <img src={ImageThree} />
-              <img src={ImageFour} />
-              <img src={ImageFive} />
+              <img src={ImageOne} alt='Sobrado no Bairro Alto' />
+              <img src={ImageTwo} alt='Sobrado no Bairro Alto'  />
+              <img src={ImageThree} alt='Sobrado no Bairro Alto'  />
+              <img src={ImageFour} alt='Sobrado no Bairro Alto'  />
+              <img src={ImageFive} alt='Sobrado no Bairro Alto'  />
             </Grid>
           </SRLWrapper>
         </Gallery>

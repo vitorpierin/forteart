@@ -4,47 +4,7 @@ import styled from 'styled-components/macro';
 export const Area = styled.section`
  display: flex;
  flex-direction: column;
- height: 100vh;
-`;
-export const Wrapper = styled.div`
-  position: absolute;
-  height: 250px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  overflow: hidden;
-  position: relative;
-  
-  &::before{
-    content: '';
-    position: absolute;
-    z-index:2;
-    width: 100%;
-    height: 100vh;
-    bottom: 0vh;
-    left: 0;
-    overflow: hidden;
-    opacity: 0.4;
-    background: linear-gradient(90deg,  rgba(109,13,19,0.4) 10%, rgba(109,13,19,0.6) 20%, rgba(109,13,19,0.8) 30%, rgba(109,13,19,0.9) 40%, rgba(109,13,19,1) 50%,  rgba(109,13,19,1) 60%, rgba(109,13,19,0.9) 70%, rgba(109,13,19,0.8) 80%, rgba(109,13,19,0.6) 90%, rgba(109,13,19,0.4) 100%);
-    
-  }
-
-  
-  h1{
-    color: #fff;
-    font-weight: bold;
-    z-index: 90;
-    text-shadow: 1px 1px 5px #000;
-  }  
-
-  @media(max-width:600px){
-    &{
-      height: 200px;
-    }
-   h1{
-     font-size: 40px;
-   } 
-  }
+ 
 `;
 
 export const Content = styled.div`
@@ -54,6 +14,7 @@ export const Content = styled.div`
   justify-content: center;
   text-align: justify;
   margin-top: 50px;
+  margin-bottom: 0px;
   padding: 20px;
   
   p{
@@ -71,6 +32,7 @@ export const Form = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: -80px;
+  margin-bottom: 0px;
   .label{
     display: flex;
     justify-content: center;
@@ -98,14 +60,15 @@ export const Form = styled.div`
     color: #262626;
   }
   input{
-    box-shadow: 0px 0px 4px #999;
+    border: 1px solid #c3c3c3;
+    box-shadow: 0px 0px 5px #c3c3c3;
     width: 100%;
     border-radius: 5px;
     &:focus{
       outline-style: solid;
-      outline-color: #c3c3c3;
+      outline-color: #777;
       outline-width: 1px;
-      box-shadow: 0px 0px 5px #333;
+      box-shadow: 0px 0px 5px #555;
     }
     &:last-child{
       border: none;
@@ -122,15 +85,16 @@ export const Form = styled.div`
     }
   }
   textarea{
-    box-shadow: 0px 0px 4px #999;
+    border: 1px solid #c3c3c3;
+    box-shadow: 0px 0px 5px #c3c3c3;
     width: 100%;
     border-radius: 5px;
     outline: none;
     &:focus{
       outline-style: solid;
-      outline-color: #c3c3c3;
+      outline-color: #777;
       outline-width: 1px;
-      box-shadow: 0px 0px 5px #333;
+      box-shadow: 0px 0px 5px #555;
     }
   }
   label{
@@ -138,13 +102,53 @@ export const Form = styled.div`
     text-shadow: 1px 1px 1px #c3c3c3;
     align-self: flex-start;
     margin-top: 15px;
+    p{
+      margin-left: -8px;
+    }
   }
+  a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 50px;
+  color: #6D0D13;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  
+    p{
+    color: #666;
+    text-shadow: 2px 2px 35px #555;
+    font-weight: bold;
+    font-size:35px;
+    color: #6D0D13;
+    letter-spacing: 2px;
+  }
+ 
+ 
+}
   @media(max-width: 800px){
     form{
     width: 350px;
-   
+   }
+  .label{
+    
+    p{
+      font-size: 20px;
+    }
+  }  
+  div{
+  a{
+  font-size: 35px;
+  p{
+    
+    font-size:22px;
+    
   }
-  }
+}
+}
+}
 `;
 
   

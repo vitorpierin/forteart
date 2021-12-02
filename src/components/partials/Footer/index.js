@@ -8,6 +8,7 @@ const Footer = () => {
     <FooterArea>
         <div className="socialName">
           <h3>ForteArt Empreendimentos Imobiliários Ltda</h3>
+          <p>CNPJ 16.555.306/0001-44</p>
         </div>
     <p>Copyright © 2021 - Todos os direitos reservados - É proibida a reprodução total ou parcial </p>
     </FooterArea>
